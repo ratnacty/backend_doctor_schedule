@@ -175,7 +175,7 @@ This project is a CRUD application built with Express for the backend with datab
 
 5. Update User (has login)
 
-   * Endpoint
+* Endpoint
      
 ```bash
 
@@ -184,7 +184,7 @@ This project is a CRUD application built with Express for the backend with datab
 
 ```
 
-   * Example Request
+* Example Request
 
 ```bash
 
@@ -196,7 +196,7 @@ This project is a CRUD application built with Express for the backend with datab
 
 ```
 
-   * Example response
+* Example response
      
 ```bash
 
