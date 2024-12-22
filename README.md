@@ -61,7 +61,7 @@ This project is a CRUD application built with Express for the backend with datab
  {
      "message": "register successfull",
     "userData": {
-        "id": 2,
+        "id": 2 ,
         "username": "admin",
         "email": "admin@example.com",
         "password": "$2b$10........",
@@ -203,7 +203,7 @@ This project is a CRUD application built with Express for the backend with datab
 {
     "message": "User updated successfully",
     "updatedUser": {
-       "id": 2,"
+       "id": 2",
         "username": "update Jhon Doe",
         "email": "jhon@example.com",
         "password": "$2b$10.........",
