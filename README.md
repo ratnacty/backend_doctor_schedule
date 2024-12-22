@@ -95,7 +95,7 @@ This project is a CRUD application built with Express for the backend with datab
      
 ```bash
 
-    "message": "Login susscessfull",
+    "message": "Login successfull",
     "token": "eyJhbGc..........."
 
 ```
@@ -107,7 +107,7 @@ This project is a CRUD application built with Express for the backend with datab
 ```bash
 
    Get
-   api/users
+   /api/users
 
 ```
 
@@ -150,7 +150,7 @@ This project is a CRUD application built with Express for the backend with datab
 ```bash
 
    Get
-   api/user/:id
+   /api/user/:id
 
 ```
 
@@ -180,7 +180,7 @@ This project is a CRUD application built with Express for the backend with datab
 ```bash
 
    Put
-   api/user
+   /api/user
 
 ```
 
@@ -288,7 +288,7 @@ This project is a CRUD application built with Express for the backend with datab
 ```bash
 
    Get
-   api/doctors/:id
+   /api/doctors/:id
 
 ```
 
