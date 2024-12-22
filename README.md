@@ -15,9 +15,8 @@ This project is a CRUD application built with Express for the backend with datab
 ```
 
 ### Notes
-
-* Create `.env` file:** Use the `.env.example` file as a template and create a `.env` file.
-* Database Setup:** Create a PostgreSQL database with the name `doctor_schedule`. Ensure this matches the `DB_DATABASE` value in the `.env` file.
+** Create `.env` file:** Use the `.env.example` file as a template and create a `.env` file.
+** Database Setup:** Create a PostgreSQL database with the name `doctor_schedule`. Ensure this matches the `DB_DATABASE` value in the `.env` file.
   
 * Run the following command to generate database:
      
