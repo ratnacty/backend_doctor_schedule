@@ -46,7 +46,6 @@ export const getAllSchedule = async (req, res) => {
 
 
 
-
 // create schedule
 
 export const createSchedule = async (req, res) => {

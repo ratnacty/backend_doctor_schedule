@@ -18,7 +18,6 @@ export const register = async(req, res) => {
     try {
         const {username,email,password, } = req.body;
 
-        // cek email
         const existingEmail = await prisma.user.findUnique({
             where: {email: req.body.email},
         });
@@ -30,7 +29,6 @@ export const register = async(req, res) => {
         // hash password
         const hashPassword = await bcrypt.hash(password, 10);
 
-        // create new user
         const userData = await prisma.user.create({
             data:{
                 
@@ -136,7 +134,6 @@ export const updateUser = async (req, res) => {
     const user_id = req.user.id;
     const { username, email,password  } = req.body;
 
-    // Check for all required fields
     if (!username || !email ) { 
         return res.status(400).json({ message: 'Missing required fields' });
     }
@@ -147,7 +144,6 @@ export const updateUser = async (req, res) => {
             hashedPassword = await bcrypt.hash(password, 10); 
         }
 
-        // Update user data in the database
         const updatedUser = await prisma.user.update({
             where: { id: Number(user_id) },
             data: {
