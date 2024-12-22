@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CategoryDoctor {
+  GENERAL
+  SPECIALIST
+  SURGEON
+}
+
+enum Gender {
+  male
+  female
+}
+
+model User {
+  id        Int        @id @default(autoincrement())
+  username  String
+  email     String     @unique
+  password  String
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @default(now())
+
+  schedules Schedule[]
+
+
+    @@map("users")
+
+
+}
+
+model Doctor {
+  id       Int       @id @default(autoincrement())
+  name     String
+  category CategoryDoctor
+  gender   Gender
+  nip      String      @unique
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @default(now())
+
+  schedules Schedule[]
+
+  @@map("doctors")
+
+}
+
+model Schedule {
+  id         Int      @id @default(autoincrement())
+  doctorId   Int
+  doctor     Doctor   @relation(fields: [doctorId], references: [id])
+  day        String
+  time_start String
+  time_finish String
+  quota      Int
+  status     Boolean
+  date       DateTime
+  userId   Int
+  user      User   @relation(fields: [userId], references: [id])
+
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @default(now())
+
+  @@map("schedules")
+
+}
+
+
